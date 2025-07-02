@@ -1,0 +1,64 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+main {
+  flex: 1;
+}
+
+.hero-section {
+  margin-bottom: 0;
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 100px 20px;
+  }
+  .dept-card {
+    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 15px;
+  }
+  .dept-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+  }
+  .dept-card i {
+    transition: transform 0.3s;
+  }
+  .dept-card:hover i {
+    transform: scale(1.2);
+  }
+  form select {
+    font-size: 1rem;
+  }
+  form label {
+    font-weight: 500;
+  }
+  
+  .form-check {
+    transition: all 0.2s ease-in-out;
+  }
+  .form-check:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  .form-check-input:checked {
+    background-color: #198754;  /* Bootstrap green */
+    border-color: #198754;
+  }
+  
+  .slot{
+    padding-left: 16px;
+  }

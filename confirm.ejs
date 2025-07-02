@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking Confirmation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8ff; /* light blue */
+      color: #003366;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 50, 0.1);
+      text-align: center;
+    }
+
+    .success-icon {
+      font-size: 50px;
+      color: #007bff;
+    }
+
+    .card {
+      background-color: #f7fbff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+      border: 1px solid #d0e4f5;
+      text-align: left;
+    }
+
+    .card h5 {
+      color: #0056b3;
+      margin-bottom: 15px;
+    }
+
+    .list-group-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #e1ecf4;
+    }
+
+    .list-group-item:last-child {
+      border-bottom: none;
+    }
+
+    .btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="success-icon">✅</div>
+    <h2>Booking Confirmed!</h2>
+    <p class="lead">You have successfully booked the venue.</p>
+
+    <div class="card">
+      <h5>Booking Details</h5>
+      <div class="list-group">
+        <div class="list-group-item"><strong>Venue:</strong> <%= cslotname %></div>
+        <div class="list-group-item"><strong>Date:</strong> <%= cdate %></div>
+        <div class="list-group-item"><strong>Selected Time Slot:</strong> <%= cperiod %></div>
+      </div>
+    </div>
+    <a href="/home" class="btn">Back to Home</a>
+  </div>
+</body>
+</html>

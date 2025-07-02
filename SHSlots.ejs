@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Slot - Science and Humanities</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4 w-100" style="max-width: 600px;">
+      <h2 class="text-center mb-4">Book a Slot - S&H</h2>
+      
+      <form action="/bookslotsInSH" method="POST">
+        <!-- Slot Selection -->
+        <div class="mb-3">
+          <label for="SlotID" class="form-label">Choose Slot:</label>
+          <select name="SlotID" class="form-select" required>
+            <option value="1">Sensus Hall</option>
+            <option value="2">Smart Class 1</option>
+            <option value="3">ABL</option>
+            <option value="4">Seminar Hall</option>
+            <option value="5">Smart Class 2</option>
+            <option value="6">Training Hall 1</option>
+            <option value="7">Training Hall 2</option>
+          </select>
+        </div>
+
+        <!-- Booking Date -->
+        <div class="mb-3">
+          <label for="Datex" class="form-label">Booking Date:</label>
+          <select name="Datex" class="form-select" required>
+            <option value="today">Today</option>
+            <option value="tomorrow">Tomorrow</option>
+          </select>
+        </div>
+
+        <!-- Period -->
+        <div class="mb-3">
+          <label for="Period" class="form-label">Select Period:</label>
+          <select name="Period" class="form-select" required>
+            <option value="1">Period 1</option>
+            <option value="2">Period 2</option>
+            <option value="3">Period 3</option>
+            <option value="4">Period 4</option>
+            <option value="5">Period 5</option>
+            <option value="6">Period 6</option>
+            <option value="7">Period 7</option>
+            <option value="8">Period 8</option>
+          </select>
+        </div>
+
+        <!-- User ID -->
+        <div class="mb-3">
+          <label for="UserIDforBooking" class="form-label">Your User ID:</label>
+          <input type="text" name="UserIDforBooking" class="form-control" required />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="Description" class="form-label">Purpose / Description:</label>
+          <textarea name="Description" rows="4" class="form-control" required></textarea>
+        </div>
+        <!-- <div class="mb-3">
+          <label for="Dep" class="form-label">For which Department students :</label>
+          <textarea name="Dep" rows="2" class="form-control" required></textarea>
+        </div> -->
+
+        <div class="mb-3">
+          <label for="Dep" class="form-label">For which Department:</label>
+          <select name="Dep" id="Dep" class="form-select" required>
+              <option value="" selected disabled>-- Select --</option>
+              <option value="SH">S & H</option>
+              <option value="IT">IT</option>
+              <option value="CSE">CSE</option>
+              <option value="AIDS">AI&DS</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="Civil">CIVIL</option>
+              <option value="Mech">MECH</option>
+          </select>
+        </div>
+        <!-- Submit Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Book Slot</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
