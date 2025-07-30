@@ -13,7 +13,7 @@ const web=express();
 const PORT=3000;
 const {Pool}= pkg;
 
-const IT=['24243034@nec.edu.in','24205037@nec.edu.in'];
+const IT=[];
 const CSE=[];
 const AIDS=[];
 const Civil=[];
@@ -24,7 +24,7 @@ const pool=new Pool({
     user: "postgres",        
     host: "localhost",      
     database: "VenueBookingSystem",        
-    password: "Bala@2007", 
+    password: "", 
     port: 5432,
 })
 
@@ -140,8 +140,8 @@ web.post("/bookslotsInSH",async(req,res)=>{
             const transporter=nodemailer.createTransport({
                 service:'gmail',
                 auth:{
-                    user:'24205037@nec.edu.in',
-                    pass:"bbya ucgz aiev ukyc"
+                    user:'',
+                    pass:""
                 }
             });
             let departmentChoice;
@@ -155,7 +155,7 @@ web.post("/bookslotsInSH",async(req,res)=>{
                 case "EEE":departmentChoice="EEE";break;
             }
             const mailOptions={
-                from:'24205037@nec.edu.in',
+                from:'admin@gmail.com',
                 to:IT,
                 subject:"Class Alert",
                 text:Description
@@ -218,7 +218,7 @@ web.post("/bookslotsInSH",async(req,res)=>{
                 case "EEE":departmentChoice="EEE";break;
             }
             const mailOptions={
-                from:'24205037@nec.edu.in', //it is like admin mail 
+                from:'', //it is like admin mail 
                 to:IT,
                 subject:"Class Alert",
                 text:Description
