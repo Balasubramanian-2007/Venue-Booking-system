@@ -203,8 +203,8 @@ web.post("/bookslotsInSH",async(req,res)=>{
             const transporter=nodemailer.createTransport({
                 service:'gmail',
                 auth:{
-                    user:'24205037@nec.edu.in',
-                    pass:"bbya ucgz aiev ukyc"
+                    user:'',
+                    pass:""
                 }
             });
             let departmentChoice;
